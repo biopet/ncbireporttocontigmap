@@ -7,7 +7,7 @@ object NcbiReporttoContigMapTest extends BiopetTest {
   @Test
   def testNoArgs(): Unit = {
     intercept[IllegalArgumentException] {
-      ToolTemplate.main(Array())
+      NcbiReporttoContigMap.main(Array())
     }
   }
 }
