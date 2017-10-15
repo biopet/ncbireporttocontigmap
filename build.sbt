@@ -9,7 +9,7 @@ libraryDependencies += "com.github.biopet" %% "biopet-tool-utils" % "0.1.0-SNAPS
 
 libraryDependencies += "com.github.biopet" %% "biopet-test-utils" % "0.1.0-SNAPSHOT" % Test changing()
 
-mainClass in assembly := Some("nl.biopet.tools.ncbireporttocontigmap.NcbiReporttoContigMap")
+mainClass in assembly := Some("nl.biopet.tools.ncbireporttocontigmap.NcbiReportToContigMap")
 
 useGpg := true
 
