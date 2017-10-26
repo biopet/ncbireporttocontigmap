@@ -4,7 +4,7 @@ Each tool in the BIOPET tool suite is meant to offer a standalone function that 
 dedicate data analysis task or added as part of [BIOPET pipelines](http://biopet-docs.readthedocs.io/en/latest/).
 
 #  About this tool
-<Description of a tool>
+This tool converts a NCBI assembly report to a contig map file.
 
 #  Documentation
 For documentation and manuals visit the [readthedocs page](http://biopet-NcbiReportToContigMap.readthedocs.io/en/latest/).
