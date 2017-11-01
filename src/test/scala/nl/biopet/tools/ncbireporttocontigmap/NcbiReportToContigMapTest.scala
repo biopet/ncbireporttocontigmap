@@ -8,6 +8,7 @@ import org.testng.annotations.Test
 import scala.io.Source
 
 class NcbiReportToContigMapTest extends ToolTest[Args] {
+  def toolCommand: NcbiReportToContigMap.type = NcbiReportToContigMap
   @Test
   def testNoArgs(): Unit = {
     intercept[IllegalArgumentException] {
