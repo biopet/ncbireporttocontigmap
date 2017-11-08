@@ -32,7 +32,8 @@ object NcbiReportToContigMap extends ToolCommand[Args] {
       .zipWithIndex
       .toMap
 
-    val altNameIds = cmdArgs.names.filter(_ != cmdArgs.contigNameHeader).map(headers)
+    val altNameIds =
+      cmdArgs.names.filter(_ != cmdArgs.contigNameHeader).map(headers)
     val nameId = headers(cmdArgs.contigNameHeader)
 
     val writer = new PrintWriter(cmdArgs.outputFile)

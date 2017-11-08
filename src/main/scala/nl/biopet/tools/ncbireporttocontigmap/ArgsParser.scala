@@ -9,11 +9,13 @@ class ArgsParser(cmdName: String) extends AbstractOptParser[Args](cmdName) {
     (x, c) =>
       c.copy(assemblyReport = x)
   } text "Assembly report from NCBI"
-  opt[File]('o', "output") required () unbounded () valueName "<file>" action { (x, c) =>
-    c.copy(outputFile = x)
+  opt[File]('o', "output") required () unbounded () valueName "<file>" action {
+    (x, c) =>
+      c.copy(outputFile = x)
   } text "output contig map"
-  opt[String]("nameHeader") required () unbounded () valueName "<string>" action { (x, c) =>
-    c.copy(contigNameHeader = x)
+  opt[String]("nameHeader") required () unbounded () valueName "<string>" action {
+    (x, c) =>
+      c.copy(contigNameHeader = x)
   } text
     """
       | What column to use from the NCBI report for the name of the contigs.
