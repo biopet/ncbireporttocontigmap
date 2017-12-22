@@ -47,4 +47,37 @@ object NcbiReportToContigMap extends ToolCommand[Args] {
 
     logger.info("Done")
   }
+
+  def descriptionText: String =
+    """
+      |This tool generates a contig map file using the information
+      |from a NCBI assembly report. It has an option to select
+      |which column in the NCBI report should be used.
+    """.stripMargin
+
+  def manualText: String =
+    s"""
+      |$toolName needs a NCBI assembly report, an output file, and the name column that should be used from the report.
+      |All columns in the report can be used but these are the most common fields to choose from:
+      | - 'Sequence-Name': Name of the contig within the assembly
+      | - 'UCSC-style-name': Name of the contig used by UCSC ( like hg19 )
+      | - 'RefSeq-Accn': Unique name of the contig at RefSeq (default for NCBI)
+      |
+      |Optionally other columns in the report can be added to the contig map with the `--names` flag.
+    """.stripMargin
+
+  def exampleText: String =
+    s"""
+       | To construct a contig map from a NCBI assembly report,
+       | use the UCSC-style-name for the contigs, and include the RefSeq-Accn
+       | column:
+       | ${example("-a",
+                   "ncbi_assembly_report.txt",
+                   "-o",
+                   "contig_map.tsv",
+                   "--nameHeader",
+                   "UCSC-style-name",
+                   "--names",
+                   "Refseq-Accn")}
+     """.stripMargin
 }
